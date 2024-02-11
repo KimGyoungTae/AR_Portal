@@ -1,0 +1,81 @@
+Shader "Unlit/MaskSurface"
+{
+    Properties
+    {
+        _MainTex ("Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+         Tags
+        {
+            "RenderType" = "Opaque"
+
+            //"Queue" = "Geometry-1" // 반드시 대상보다 먼저 그려져야 하므로
+        }
+
+        LOD 100
+     //  ColorMask 0
+        Zwrite off
+
+        Stencil
+        {
+            ref 1
+            comp always
+            pass replace
+        }
+
+        //Stencil
+        //{
+        //    ref 1
+        //    comp Never   // 항상 렌더링 하지 않음
+        //    Fail Replace // 렌더링 실패한 부분의 스텐실 버퍼에 1을 채움
+        //}
+
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // make fog work
+            #pragma multi_compile_fog
+
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                UNITY_FOG_COORDS(1)
+                float4 vertex : SV_POSITION;
+            };
+
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+
+            v2f vert (appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                UNITY_TRANSFER_FOG(o,o.vertex);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // sample the texture
+                fixed4 col = tex2D(_MainTex, i.uv);
+                // apply fog
+                UNITY_APPLY_FOG(i.fogCoord, col);
+                return col;
+            }
+            ENDCG
+        }
+    }
+}
