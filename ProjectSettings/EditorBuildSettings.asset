@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AR Gps.unity
-    guid: cf79c2a2fbb772d47bead9874538fc0e
+    path: Assets/Scenes/Portal/Sample Portal.unity
+    guid: 9bf0b453c521d3d489823cef2c2da74f
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

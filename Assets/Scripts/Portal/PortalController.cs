@@ -24,6 +24,8 @@ public class PortalController : MonoBehaviour
 
     void SetMaterials(bool active)
     {
+        // active == true : CompareFunction.NotEqual
+        // active == false : CompareFunction.Equal
         var stencilTest = active ? CompareFunction.NotEqual : CompareFunction.Equal;
 
         foreach (var material in materials)
@@ -73,6 +75,7 @@ public class PortalController : MonoBehaviour
 
         bool isFront = GetIsFront();
 
+        // 이전 상태와 현재 상태를 비교하여 카메라가 포탈 앞에서 뒤로, 뒤에서 앞으로 이동했는 지 여부를 판단.
         if ((isFront && !front) || (front && !isFront))
         {
             otherWorld = !otherWorld;

@@ -14,8 +14,8 @@ Shader "Custom/PortalMask"
         }
 
         LOD 100
-        ColorMask 0
-        Zwrite off
+        ColorMask 0 // Portal 자체는 마스크 용도이기에, 렌더링 하지 않음 -> 투명색으로 변환
+        Zwrite off  // 개체가 앞이든 뒤이든 마스크를 통해서 보여지고 싶을 때 
         Cull off
 
         Pass
