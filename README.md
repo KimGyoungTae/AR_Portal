@@ -1,10 +1,6 @@
 # Unity AR Portal
 ![image](https://github.com/KimGyoungTae/AR_Portal/assets/83820089/2bc3e135-5091-483b-9965-999335d4cad7)
 <br>
-![2024-02-1219-54-34-ezgif com-video-to-gif-converter](https://github.com/KimGyoungTae/AR_Portal/assets/83820089/54712b2f-f091-4053-8a08-f67b6c9460f7)
-
-
-<br>
 
 ## 📝 프로젝트  소개
 
@@ -119,4 +115,4 @@ void SetMaterials(bool active)
 
 ![image](https://github.com/KimGyoungTae/AR_Portal/assets/83820089/e2998c07-d897-4668-806b-6f988d374c40)
 
-
+![2024-02-1219-54-34-ezgif com-video-to-gif-converter](https://github.com/KimGyoungTae/AR_Portal/assets/83820089/54712b2f-f091-4053-8a08-f67b6c9460f7)
