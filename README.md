@@ -1,10 +1,8 @@
-# Unity AR Portal
+# AR Portal using Unity Stencil Buffer
 ![image](https://github.com/KimGyoungTae/AR_Portal/assets/83820089/2bc3e135-5091-483b-9965-999335d4cad7)
 <br>
 
 ## 📝 프로젝트  소개
-
-###  AR Portal using Unity Stencil Buffer :
 
 🎥 구현 영상 : https://www.youtube.com/watch?v=3BNphi6mY9Y
 
