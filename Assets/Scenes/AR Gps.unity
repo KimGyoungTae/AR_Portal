@@ -513,12 +513,8 @@ MonoBehaviour:
   PopUP: {fileID: 379130406}
   isFirst: 0
   isExitPopUP: 0
-  lats:
-  - 35.156734
-  - 35.156741
-  longs:
-  - 126.91567
-  - 126.915258
+  lats: []
+  longs: []
   assumedHeight: -0.5
   arObject: {fileID: 9124249877326275086}
   slender: {fileID: 1741814367710115078}
@@ -550,7 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ec67c80d82487459fef605c4f52504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GPSPosition: {x: 35.156742, y: 126.91526}
+  GPSPosition: {x: 0, y: 0}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1391769581
 GameObject:
